@@ -45,5 +45,9 @@ On mouse button or else where...
 	}
 ```
 	
-If you have a several types of guns with various power, you may use last parameter in RayCastToShields() on each gun type fire, with adjustment for last parameter [0..1] (-1 = internaly mean use default hit power)
+If you have a several types of guns with various power, you may use last parameter in RayCastToShields() on each gun type fire, with adjustment for last parameter 
+
+```
+normalizedFirePower =[0..1] // -1 = internaly mean use default hit power
+```
 
