@@ -1,0 +1,3 @@
+<technique vs="Shield" ps="Shield" psdefines="DIFFMAP">
+    <pass name="alpha" depthwrite="false" blend="addalpha" />
+</technique>
