@@ -13,17 +13,21 @@ void Game::Start()
     Shield::RegisterObject(context_);
     ...
 }
+```
 
 On level loading or scene create call:
+```
 SetupAllSceneShields(Scene* scene)
-
+```
 To create Shield for all objects in scene what have a "shield" var.
 
 Do shoting with this method: 
+```
 void RayCastToShields(Scene* scene, Camera* camera, Vector3 wsFrom, float normalizedFirePower = -1.0f)
+```
 
-On mouse button of else...
-
+On mouse button or else where...
+```
 	void HandleMouseButtonDown(StringHash eventType, VariantMap& eventData)
 	{
 		using namespace MouseButtonDown;
@@ -39,6 +43,7 @@ On mouse button of else...
 			RayCastToShields(gameScene->scene, camera, firefrom);			
 		}
 	}
-
-
 ```
+	
+If you have a several types of guns with various power, you may use last parameter in RayCastToShields() on each gun type fire, with adjustment for last parameter [0..1] (-1 = internaly mean use default hit power)
+
